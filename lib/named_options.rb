@@ -28,3 +28,6 @@ class NamedOptions < HashWithIndifferentAccess
     end
   end
 end
+
+require File.dirname(__FILE__) + '/../core_ext/array/optionize'
+
