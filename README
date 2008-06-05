@@ -1,0 +1,39 @@
+NamedOptions
+============
+
+This plugin offers a new instance method "optionize" to Array class.
+
+  Array#optionize(*names)
+
+This parses its array object according to the passed names
+and then returns a hash.
+In short, this is a converter from args to options.
+
+
+Usage
+=====
+
+Let's consider following code.
+
+def user(*args)
+  options = args.optionize(:name, :age)
+  options[:name] # => "maiha"
+  options[:age]  # => 14
+
+
+Now we can pass args in various formats.
+
+  user("maiha", 14)
+  user(:name => 'maiha', :age => 14)
+  user("maiha", :age => 14)
+
+
+Install
+=======
+
+git://github.com/maiha/named_options.git
+
+
+Author
+======
+Maiha <maiha@wota.jp>
